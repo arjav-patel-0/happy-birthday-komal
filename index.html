@@ -8,7 +8,10 @@
 </html>
 
 <body>
-    <div class="container">
+    <div class="loader">
+        <div id="ababa"></div>
+    </div>
+    <div class="container" id="main">
         <div class="happy-birthday">
             Happy Birthday Komal!
         </div>
@@ -22,5 +25,22 @@
             PS: The image is of Gulab Jamuns.<br> I would have surely gifted you real Gulab Jamuns if we would have been together!
         </div>
     </div>
+    <script>
+        var text = "ababababababababababababababababababababababa";
+        var i = 0;
+        typeWriter();
+        function typeWriter() {
+            var e = document.getElementById("ababa");
+            if (i < text.length) {
+                e.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            } else {
+                var x = document.getElementById("main");
+                e.style.display = "none";
+                x.style.display = "block";
+            }
+        }
+    </script>
 
 </body>
