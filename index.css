@@ -44,6 +44,9 @@
     .ps-text {
         font-size: 1em;
     }
+    #main {
+        font-size: 5em;
+    }
 }
 
 @media (min-width: 481px) {
